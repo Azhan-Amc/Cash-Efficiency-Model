@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Price data from Yahoo Finance, not redistributed
+*.csv
+__pycache__/
