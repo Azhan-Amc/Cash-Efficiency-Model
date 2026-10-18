@@ -4,14 +4,14 @@
 
 ## Main finding
 
-Using a simple 200-day trend rule on a Shariah-compliant equity ETF (HLAL), the cost of not having T-bills was small: **about 0.3% a year** when parking in 0% cash, in both the in-sample and the out-of-sample period.
+Using a simple monthly 200-day trend rule on a Shariah-compliant equity ETF (HLAL), the cost of not having T-bills was small: **about 0.5% a year before trading costs and about 0.3% after** when parking in 0% cash, in both the in-sample and the out-of-sample period.
 
-- **Sukuk (SPSK)** was the most reliable halal replacement. It matched or beat T-bills on return in every test (6 of 6), with at most 1.5 points of extra drawdown.
+- **Sukuk (SPSK)** was the most reliable halal replacement in this sample. It matched or beat T-bills on return in every test (6 of 6), with at most 1.5 points of extra drawdown. These tests cover only a few parked episodes, so this is a measurement, not a statistically established result.
 - **Gold (GLD)** earned about 2.4% a year more than T-bills with the main rule, but with deeper drawdowns, and its result flipped negative when the signal was checked daily. Gold's result depends heavily on timing.
 - **Trading costs barely mattered**, because the rule switches rarely (7 switches in 3.7 years in-sample, 2 in 2.75 years out-of-sample).
-- **Purification** (0.8% of HLAL's dividends) changed returns by less than 0.01% a year.
+- **Purification** (0.8% of HLAL's dividends, a third-party estimate) changed returns by less than 0.01% a year.
 
-The cost of 0% cash is roughly **the T-bill rate × the share of time parked**. Out-of-sample, T-bills paid more but the rule was parked only 9% of the time; in-sample, rates were lower but it was parked 23% of the time. Both land near 0.3% a year.
+The cost of 0% cash is roughly **the T-bill return earned while parked, minus the extra cost of trading a T-bill fund** (two trades per switch instead of one). Out-of-sample, T-bills paid more but the rule was parked only 9% of the time; in-sample, rates were lower but it was parked 23% of the time. Both land near 0.5% a year before costs and 0.3% after. At 0.25% per trade, cash comes out slightly ahead in-sample (+0.07% a year).
 
 ## The gap: each halal option minus the T-bill version
 
@@ -51,16 +51,19 @@ The rule never beat buy-and-hold on return. Its protection depended on the type 
 - Short history: HLAL and SPSK start in 2019, so the test covers about 6 years and only a few real downturns.
 - The test misses the 2020 Covid crash, because the 200-day signal only starts around May 2020.
 - Out-of-sample, the rule was parked only about 3 months, so the out-of-sample gap rests on very little parked time.
-- GLD is used as a gold example (certified under the AAOIFI Shari'ah Standard on Gold); Manzil's own gold ETF is not public.
-- Purification uses a third-party estimate (0.8% of dividends), not Wahed's published figures.
+- GLD is used as the gold example (certified under the AAOIFI Shari'ah Standard on Gold). The Corex Halal Portfolio lists SPDR Gold MiniShares (GLDM) instead; GLDM was not tested.
+- Purification uses a third-party estimate (0.8% of dividends at the time; the source has since shown 1.2% and 0.1%), not Wahed's published figures.
+- The signal uses dividend-adjusted HLAL prices; the spec says "closing price" without specifying.
 - Gold can fall sharply too: GLD fell 10.3% in one day on January 30, 2026.
 
 ## Research discipline
 
-- The full design ([SPEC.md](SPEC.md)) was written on October 16, 2026, before any strategy result was produced.
+- The rule, dates, costs and metrics in [SPEC.md](SPEC.md) were fixed on October 16, 2026, before any data was loaded. Three choices were fixed after the in-sample results but before the out-of-sample run: the purification rate, measuring the out-of-sample period continuously, and running both robustness checks on both periods.
+- SPEC.md was first committed after the in-sample results, so the commit history does not prove the order above. The study was not preregistered.
 - In-sample: first valid signal (May 2020) to December 31, 2023. Out-of-sample: January 1, 2024 to September 30, 2026, run once.
 - The final script was tested on synthetic data before the out-of-sample run. It was committed to this repository after the run, so the commit history does not by itself prove that ordering.
 - No rule was changed after seeing results.
+- Every reported number was reproduced exactly by a second, separately written implementation (`audit/independent_check.py`). It was written by the same author with AI assistance, so it is an internal cross-check, not a third-party replication.
 - Every instrument held passed a halal check (SPEC.md, section 6). T-bills are used only as a benchmark and never held.
 
 ## How to run
