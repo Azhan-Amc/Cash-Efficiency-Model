@@ -67,6 +67,10 @@ The rule never beat buy-and-hold on return. Its protection depended on the type 
 - Every reported number was reproduced exactly by a second, separately written implementation (`audit/independent_check.py`). It was written by the same author with AI assistance, so it is an internal cross-check, not a third-party replication.
 - Every instrument held passed a halal check (SPEC.md, section 6). T-bills are used only as a benchmark and never held.
 
+## Use of AI
+
+The author chose the research question, made all methodological decisions and ran the analysis. Code and text were drafted with the assistance of an AI model (Claude, Anthropic) and reviewed by the author. Every reported figure was reproduced by a second, separately written implementation (`audit/independent_check.py`).
+
 ## How to run
 
 ```
