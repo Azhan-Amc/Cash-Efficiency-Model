@@ -55,6 +55,7 @@ The rule never beat buy-and-hold on return. Its protection depended on the type 
 - Purification uses a third-party estimate (0.8% of dividends at the time; the source has since shown 1.2% and 0.1%), not Wahed's published figures.
 - The signal uses dividend-adjusted HLAL prices; the spec says "closing price" without specifying.
 - Gold can fall sharply too: GLD fell 10.3% in one day on January 30, 2026.
+- The benchmark is US T-bills in US dollars. For an investor in Canadian dollars, the forgone rate is the Canadian T-bill rate, which was lower than the US rate for much of 2025, so their cost was likely somewhat lower. Currency effects are not modelled.
 
 ## Research discipline
 
