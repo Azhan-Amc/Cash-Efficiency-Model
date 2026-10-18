@@ -118,7 +118,8 @@ def main():
                     linestyle=spec["style"], linewidth=1.2, zorder=3)
 
     ends = {name: equities[name].iloc[-1] for name in SERIES}
-    label_y = place_end_labels(top, ends, min_gap=0.075)
+    y_low, y_high = top.get_ylim()
+    label_y = place_end_labels(top, ends, min_gap=0.055 * (y_high - y_low))
     last_day = equities["Buy-and-hold HLAL"].index[-1]
     label_x = last_day + pd.Timedelta(days=25)
     for name, spec in SERIES.items():
