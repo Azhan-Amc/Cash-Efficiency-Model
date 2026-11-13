@@ -10,8 +10,8 @@ amount is exactly 5% of the dividend per share.
 
 One variable changes: the purification rate, 0.8% -> 5%. Everything else
 is exactly step 8 (same rule, dates, costs, scenarios, out-of-sample
-convention). No earlier file is modified; step 8's rate is swapped only
-inside this script while it runs.
+convention). Step 8's rate is swapped only inside this script while it
+runs.
 
 Results already seen in step 8, so this is a correction of an input,
 not a new out-of-sample test.

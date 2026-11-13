@@ -3,8 +3,7 @@ Performance metrics for the Cash Efficiency Model.
 
 Every step of the backtest uses these same functions, so all versions
 (buy-and-hold, rule + cash, rule + sukuk, rule + gold, rule + T-bills)
-are measured in exactly the same way. This file should not change
-between steps.
+are measured in exactly the same way.
 
 Definitions (from SPEC.md, section 5):
 - CAGR: annual growth rate, from the initial capital to the final value.

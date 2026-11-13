@@ -2,7 +2,7 @@
 Cash Efficiency Model - Step 5: 200-day rule parking in sukuk (in-sample only).
 
 Same rule as step 3; the only change is the parking option: SPSK instead
-of 0% cash. The rule is in backtest.py and is not modified.
+of 0% cash. The rule is in backtest.py.
 
 Only in-sample data is used (up to December 31, 2023).
 

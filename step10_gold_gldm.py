@@ -10,7 +10,6 @@ better while the rule is parked in gold.
 One variable changes: the gold ETF. Everything else is exactly step 8:
 same rule, same dates, same costs, same purification, same
 continue-don't-restart out-of-sample convention, same three scenarios.
-No earlier file is modified.
 
 The out-of-sample result for GLD was already seen in step 8, so this is
 a robustness check on the instrument, not a new out-of-sample test.

@@ -1,8 +1,8 @@
 """
-The 200-day rule backtest, shared by steps 3 to 6.
+The 200-day rule backtest, shared by the step scripts.
 
 Only the parking option changes between steps (0% cash, GLD, SPSK, BIL),
-so the rule itself lives here once and is never rewritten.
+so the rule is defined once, here.
 
 The rule (SPEC.md, section 3):
 - On the last trading day of each month, compare HLAL's close with its
