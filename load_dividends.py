@@ -3,8 +3,7 @@ Cash Efficiency Model - Purification data: HLAL dividends.
 
 Downloads HLAL's dividend history and its unadjusted closing prices,
 which are needed to turn each dividend into a percentage. prices.csv
-only has dividend-adjusted prices, so this is a separate file;
-load_data.py is not changed.
+only has dividend-adjusted prices, so this is a separate file.
 
 Saves dividends_hlal.csv with, for each trading day:
 - raw_close: unadjusted closing price

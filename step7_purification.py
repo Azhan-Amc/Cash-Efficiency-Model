@@ -17,8 +17,6 @@ How it is applied:
 - Every version is purified, including the T-bill benchmark, so the gap
   still measures only the parking choice.
 
-backtest.py and metrics.py are not changed.
-
 Only in-sample data is used (up to December 31, 2023).
 
 Requires prices.csv (load_data.py) and dividends_hlal.csv (load_dividends.py).
