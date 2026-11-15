@@ -91,6 +91,8 @@ python step9_chart.py
 python step10_gold_gldm.py
 python step11_purification_wahed.py
 python 12_parking_options_on_their_own.py
+python step13_choose_basket_weights.py
+python step14_rule_with_basket.py
 ```
 
 To cross-check the results with the separate implementation, run `python audit/independent_check.py .` from the repository root.
@@ -116,6 +118,8 @@ Price data is downloaded from Yahoo Finance and not included in this repository.
 | 10 | `step10_gold_gldm.py` | Same as step 8, parking in GLDM instead of GLD |
 | 11 | `step11_purification_wahed.py` | Same as step 8, purified at Wahed's published 5% |
 | 12 | `12_parking_options_on_their_own.py` | Each parking asset on its own: risk, correlation with HLAL, returns in drawdowns (saved in `results/step12/`) |
+| 13 | `step13_choose_basket_weights.py` | Part 2: chooses the sukuk + gold parking basket's weights on 2004–2019 data (SPEC.md, section 7). Result: 65% SPSK + 35% GLD |
+| 14 | `step14_rule_with_basket.py` | Part 2: the rule parking in that basket, next to cash, SPSK, GLD and T-bills, every scenario |
 | — | `audit/independent_check.py` | Separate re-implementation that reproduces steps 2 to 8 |
 
 ## Next

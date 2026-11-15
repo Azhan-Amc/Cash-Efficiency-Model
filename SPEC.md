@@ -100,3 +100,28 @@ Known limitations:
 
 - About 6 years of data, with only a few real downturns.
 - The test misses the 2020 Covid crash, because the 200-day signal only starts around May 2020.
+
+## 7. Parking basket (added November 11, 2026)
+
+Written before steps 13 and 14 were run on real data. Stage 1 of the paper is unchanged; this is an extension.
+
+**Question.** Does parking in a fixed mix of sukuk and gold do better than parking in either one alone?
+
+**Why the weights are not chosen on 2020–2026.** The results of SPSK and GLD on the HLAL period are already known (steps 3–12). Any mix picked there would be fitted to them. So the weights are decided on earlier data, by a rule fixed here.
+
+| Item | Locked choice |
+| --- | --- |
+| Calibration data | Nov 18, 2004 (GLD's first day) to Jun 28, 2019 (before HLAL launched). Never used by the paper. |
+| Parked periods | Same rule as section 3, with SPY standing in for a US Shariah equity index |
+| Measuring tools | GLD for gold; PREMX (emerging-market dollar bond fund) standing in for sukuk, since SPSK starts in Dec 2019. Neither SPY nor PREMX is ever held. |
+| Weighting rule | Inverse volatility (equal risk from each asset), using weekly returns during parked weeks only |
+| Rounding | Nearest 5%; the rounded weights are locked and written to `results/step13_basket_weights.json` |
+| 0% cash | Not in the basket. At a 0% risk-free rate, adding cash lowers return and risk together and leaves the Sharpe ratio unchanged: it sets the risk level, not the efficiency |
+| Instruments held | Sukuk weight in SPSK, gold weight in GLD (both passed section 6) |
+| Rebalancing | Back to target weights at each monthly check while parked (the day the rule acts). No other rebalancing |
+| Costs | 0.10% on every dollar bought or sold. Entering or leaving the basket costs the same as a single ETF (0.20%) |
+| Everything else | As the paper's main test: dates, scenarios, out-of-sample convention, 5% purification |
+
+**What counts as a result.** The basket's return gap and drawdown gap against T-bills, next to cash, SPSK and GLD, in every scenario and both periods, all reported.
+
+**Honest limit.** Because the components' 2020–2026 results were already seen, step 14 is not a fresh out-of-sample test. The weights were not fitted to them. The only clean test is forward, from the date the weights are locked.
